@@ -1,0 +1,555 @@
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("./assets/cafe-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+.full-height-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+}
+
+header .logo {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+header h1 {
+  margin-top: 40px;
+  color: #8b4513; /* Warna coklat muda untuk "Lett Coffee" */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: buttonPulse 0.8s infinite;
+}
+
+nav ul li a:hover::before {
+  left: 100%;
+}
+
+nav ul li:nth-child(1) a:hover {
+  color: #ffd700;
+}
+
+nav ul li:nth-child(2) a:hover {
+  color: #053651;
+}
+
+nav ul li:nth-child(3) a:hover {
+  color: #ff6347;
+}
+
+nav ul li:nth-child(4) a:hover {
+  color: #00ced1;
+}
+
+nav ul li:nth-child(5) a:hover {
+  color: #32cd32;
+}
+
+.full-height-layout main {
+  flex: 1;
+  padding-bottom: 60px;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.about-cafe {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+#menu {
+  text-align: center;
+  padding: 20px;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.menu-item h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.menu-item p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.testimonial {
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.customer-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  width: auto;
+  min-width: 200px;
+  padding: 12px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto 0;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.full-height-layout footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instagram-link {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.instagram-logo {
+  width: 40px;
+  height: 40px;
+  color: #fff; /* Warna logo */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.instagram-link:hover .instagram-logo {
+  color: #e1306c; /* Warna Instagram ketika di-hover */
+  transform: scale(1.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.toggler {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggler span {
+  background-color: #fff;
+  margin: 4px;
+  width: 25px;
+  height: 2px;
+}
+
+/* Media Queries untuk Responsiveness */
+@media (max-width: 840px) {
+  form {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  header .logo {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  header h1 {
+    margin-top: 120px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .customer-icon {
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .menu-items {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  header .logo {
+    width: 190px;
+    height: 190px;
+    top: -20px;
+  }
+
+  header h1 {
+    margin-top: 80px;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn {
+    font-size: 0.9em;
+    padding: 10px 15px;
+    margin: 5px;
+    flex: 0 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  #home h2 {
+    font-size: 2em;
+  }
+
+  #home p {
+    font-size: 1em;
+  }
+}
+
+button[type="submit"] {
+  background-color: #25d366; /* Warna hijau WhatsApp */
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #128c7e; /* Warna hijau WhatsApp yang lebih gelap saat hover */
+}
+
+/* Styles untuk homepage baru */
+#home {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#home h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #8b4513; /* Warna putih cream untuk "Welcome to" */
+}
+
+#home h2 span {
+  color: #8b4513; /* Warna coklat muda untuk "Lett Coffee" di dalam judul welcome */
+}
+
+#home p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #128c7e;
+}
+
+#features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+}
+
+.feature-container {
+  flex-basis: calc(33.333% - 20px);
+  min-width: 280px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  width: 200px; /* Memperbesar ukuran gambar */
+  height: 200px; /* Menjaga aspek rasio 1:1 */
+  object-fit: contain; /* Memastikan gambar tidak terpotong */
+  margin-bottom: 20px;
+}
+.feature h3 {
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.feature p {
+  font-size: 1.1em;
+}
+
+/* Media query untuk responsiveness fitur */
+@media (max-width: 768px) {
+  #features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.location-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.address-container {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.address-container h3 {
+  margin-top: 0;
+  color: #8b4513;
+}
+
+.address-container p {
+  margin-bottom: 10px;
+}
+
+.address-container .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.address-container .btn:hover {
+  background-color: #128c7e;
+}
+
+@media (max-width: 768px) {
+  .location-container {
+    flex-direction: column;
+  }
+
+  .map-container,
+  .address-container {
+    width: 100%;
+  }
+}
